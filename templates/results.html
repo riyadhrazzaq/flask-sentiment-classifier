@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Sentiment Classification of Reviews</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+ </head>
+ <body><h2>Your review</h2>
+<div>{{ content }}</div><h2>Prediction</h2>
+<div>This review is <strong>{{ prediction }}</strong> (probability: {{ probability }}%)</div>
+ <div id='button'>
+ <form action="/">
+ <input class="nes-btn" type=submit value='Submit another review'>
+ </form>
+</div>
+<div>NB: This service is still in development, 
+    and only performs well on Product Reviews</div>
+</body>
+</html>

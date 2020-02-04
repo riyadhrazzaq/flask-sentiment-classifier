@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Sentiment Classification of Review</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ </head>
+
+ <body><h2>Please enter your review:</h2>
+    {% from "_formhelpers.html" import render_field %}
+<form method=post action="/results">
+ <dl>
+ {{ render_field(form.review, cols='30', rows='10') }}
+ </dl>
+ <div>
+ <input class="nes-btn" type=submit value='Submit review' name='submit_btn'>
+ </div>
+</form>
+</body>
+</html>
