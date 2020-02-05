@@ -5,14 +5,14 @@
  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
  </head>
 
- <body><h2>Please Write Your Review Here</h2>
+ <body><h2>Write Your Review Here</h2>
     {% from "_formhelpers.html" import render_field %}
 <form method=post action="/results">
  <dl>
  {{ render_field(form.review, cols='30', rows='10') }}
  </dl>
  <div>
- <input class="nes-btn" type=submit value='Submit Review' name='submit_btn'>
+ <input class="nes-btn" type=submit value='View Sentiment' name='submit_btn' style="font-size: 0.6em;">
  </div>
 </form>
 </body>

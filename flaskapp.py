@@ -37,10 +37,6 @@ stemmer = SnowballStemmer(language='english')
 app = Flask(__name__)
 
 def classify(text):
-    temp_text = text
-    with open('./data/grab_reviews.tsv','a') as gr:
-        tsv_writer = csv.writer(gr, delimiter='\t')
-        tsv_writer.writerow([temp_text])
 
     text = re.sub('@\S+|https?:\S+|http?:\S|\W+', ' ', str(text).lower()).strip()
     tokens = []
@@ -54,7 +50,6 @@ def classify(text):
     pr = model.predict([text])
     f_score = np.max(pr)
     f_label = onehotenc.inverse_transform(pr)[0][0]
-    print("<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>><>",f_label,pr)
     return f_label.upper(),f_score
 
 class ReviewForm(Form):

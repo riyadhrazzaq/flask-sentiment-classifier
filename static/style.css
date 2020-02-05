@@ -6,8 +6,6 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    
 }
 
 #button{
@@ -18,11 +16,12 @@ body{
 }
 #review{
     width: calc(100% - 8px);
-    padding: .5rem 1rem;
+    padding: 1rem;
 }
 h2,form,h3{
     font-family: 'Geo', sans-serif;
     text-align: center;
+    font-size: 2em;
 }
 .nes-btn{
     border-image-slice: 2;
@@ -45,7 +44,7 @@ h2,form,h3{
     color: #212529;
     background-color: #fff;
     font-family: 'Geo',sans-serif;
-    font-size: 1 rem;
+
 }
 .nes-btn:hover{
     color:white;
