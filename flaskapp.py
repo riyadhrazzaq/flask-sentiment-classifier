@@ -63,8 +63,10 @@ def index():
 @app.route("/results", methods=["POST"])
 def results():
     form = ReviewForm(request.form)
-    if request.method == "POST" and form.validate():
+    if request.method == "POST":
         review = request.form["review"]
+    else:
+        review = "[no review]"
     y, proba = classify(review)
     return render_template("results.html",content=review,prediction=y,probability=round(proba*100, 2))
     return render_template("reviewform.html", form=form)

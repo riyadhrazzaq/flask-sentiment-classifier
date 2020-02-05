@@ -1,22 +1,29 @@
 <!doctype html>
 <html>
- <head>
- <title>Sentiment Classification of Reviews</title>
- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
- </head>
- <body><h2>Your Review</h2>
-<div>{{ content }}</div>
-<h2>Prediction</h2>
-<div>This review is <strong>{{ prediction }}</strong> with {{ probability }}% probability</div>
- <div id='button'>
- <form action="/">
- <input class="nes-btn" type=submit value='write another review' style="font-size: 0.6em;">
- </form>
-</div>
+<head>
+    <title>Sentiment Classification of Reviews</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-<div id="nb">NB: This service is still in development, 
-    and only performs well on Product Reviews</div>
-<div id="nb">github: riyadhrazzaq/flask-sentiment-analysis</div>
+</head>
+
+<body>
+    <h2>Your Review</h2>
+    <div style="font-family: sans-serif;">{{ content }}</div>
+    <h2>Prediction</h2>
+    <div style="font-family: sans-serif;" >This review is <strong>{{ prediction }}</strong> with {{ probability }}% probability</div>
+    <div id='button'>
+        <form action="/">
+            <input class="nes-btn" type=submit value='write another review' style="font-size: 0.6em;">
+        </form>
+    </div>
+    <div id="button">
+        <form action="https://github.com/riyadhrazzaq/flask-sentiment-classifier.git" target="_blank">
+            <input class="nes-btn" type="submit" value="Source on Github" style="font-size: 0.6em;">
+        </form>
+    </div>
+    <div id="nb" style="font-size: smaller; font-family: sans-serif;">This service is still in development,
+        and only performs well on product reviews</div>    
 </body>
+
 </html>
