@@ -4,3 +4,4 @@ tensorflow
 request
 scikit-learn
 wtforms
+gunicorn
