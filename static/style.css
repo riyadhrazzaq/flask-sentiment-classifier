@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand|Teko&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Geo&display=swap');
 body{
     width: 600px;
     margin: 0;
@@ -7,7 +6,10 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
+    
 }
+
 #button{
     margin: 20px;
 }
@@ -19,7 +21,7 @@ body{
     padding: .5rem 1rem;
 }
 h2,form,h3{
-    font-family: 'Teko', sans-serif;
+    font-family: 'Geo', sans-serif;
     text-align: center;
 }
 .nes-btn{
@@ -42,8 +44,13 @@ h2,form,h3{
     user-select: none;
     color: #212529;
     background-color: #fff;
+    font-family: 'Geo',sans-serif;
+    font-size: 1 rem;
 }
 .nes-btn:hover{
     color:white;
     background-color: rgb(56, 56, 56);
+}
+dd{
+    margin-left: 0px;
 }
